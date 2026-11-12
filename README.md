@@ -9,7 +9,7 @@ A responsive, static portfolio site built with HTML, CSS, and a little JavaScrip
 
 ## Publish with GitHub Pages
 
-1. Create a GitHub repository named **`udit-sharma-nz.github.io`** (replace `udit-sharma-nz` with your GitHub username if different).
+1. Create a GitHub repository named **`udit-sharma-yvr.github.io`** (replace `udit-sharma-yvr` with your GitHub username if different).
 2. Upload `index.html`, `styles.css`, and `script.js` to the repository's root.
 3. In the repository, open **Settings → Pages**.
 4. Under **Build and deployment**, choose **Deploy from a branch**.

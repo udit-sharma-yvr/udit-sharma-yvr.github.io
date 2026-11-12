@@ -3,162 +3,410 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Udit Sharma — Software Development Engineer specializing in Java, distributed systems, AWS, and cloud-native software.">
-  <meta name="theme-color" content="#0b1220">
-  <title>Udit Sharma | Software Engineer</title>
+  <meta name="description" content="Udit Sharma — SDE at Amazon. 8+ years building distributed systems, streaming infrastructure, and AI products.">
+  <meta name="theme-color" content="#0a0a0a">
+  <meta property="og:title" content="Udit Sharma — Software Engineer">
+  <meta property="og:description" content="SDE at Amazon. Kinesis, Bedrock, Go, Java. Building at scale in Vancouver, BC.">
+  <title>Udit Sharma — Software Engineer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
+  <!-- Noise overlay -->
+  <div class="noise" aria-hidden="true"></div>
+
+  <!-- ─── NAV ─── -->
   <header class="site-header">
-    <nav class="nav container" aria-label="Main navigation">
-      <a class="brand" href="#home">US<span>.</span></a>
-      <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
-      <div class="nav-links">
-        <a href="#about">About</a><a href="#experience">Experience</a>
-        <a href="#skills">Skills</a><a href="#education">Education</a>
-        <a class="nav-cta" href="#contact">Contact</a>
-      </div>
-    </nav>
+    <div class="nav-inner">
+      <a class="logo" href="#hero">US<span>.</span></a>
+      <nav aria-label="Main">
+        <a href="#about">About</a>
+        <a href="#experience">Work</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a class="nav-hire" href="mailto:mail.uditsharma@gmail.com">Hire me ↗</a>
+      <button class="burger" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+    </div>
+    <!-- mobile drawer -->
+    <div class="mobile-drawer" aria-hidden="true">
+      <a href="#about">About</a>
+      <a href="#experience">Work</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+      <a href="mailto:mail.uditsharma@gmail.com" class="drawer-cta">Hire me ↗</a>
+    </div>
   </header>
 
   <main>
-    <section class="hero container" id="home">
-      <div class="hero-copy">
-        <p class="eyebrow"><span class="status-dot"></span> SOFTWARE DEVELOPMENT ENGINEER · VANCOUVER, BC</p>
-        <h1>Building reliable systems<br><span>at scale.</span></h1>
-        <p class="hero-intro">I’m Udit Sharma, a software engineer with 8+ years of experience building distributed systems, cloud platforms, and full-stack products. I enjoy solving complex engineering problems and turning them into dependable software.</p>
-        <div class="hero-actions">
-          <a class="button button-primary" href="#experience">Explore my work <span>↘</span></a>
-          <a class="button button-secondary" href="mailto:mail.uditsharma@gmail.com">Get in touch</a>
+
+    <!-- ─── HERO ─── -->
+    <section class="hero" id="hero">
+      <div class="hero-top">
+        <div class="hero-pill">
+          <span class="live-dot"></span>
+          <span>Available for Senior / Staff SDE roles</span>
         </div>
-        <div class="quick-facts">
-          <div><strong>8+</strong><span>Years in software</span></div>
-          <div><strong>2 GB/s</strong><span>Stream throughput</span></div>
-          <div><strong>500%</strong><span>Throughput improvement</span></div>
+        <span class="hero-loc">Vancouver, BC · Canada</span>
+      </div>
+
+      <h1 class="hero-headline">
+        <span class="line" data-word="Udit">Udit</span>
+        <span class="line accent-line" data-word="Sharma">Sharma</span>
+      </h1>
+
+      <div class="hero-sub-row">
+        <p class="hero-role">Software Development Engineer<br><em>@ Amazon · 8+ years</em></p>
+        <p class="hero-desc">
+          I architect distributed systems, streaming infrastructure, and AI products
+          that handle billions of events daily. Currently shaping AI-proctored
+          assessment technology at Amazon.
+        </p>
+      </div>
+
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-num">2 GB<span class="stat-s">/s</span></span>
+          <span class="stat-label">Stream throughput achieved</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num">500<span class="stat-s">%</span></span>
+          <span class="stat-label">Throughput uplift</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num">20<span class="stat-s">%</span></span>
+          <span class="stat-label">AI cost reduction</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num">8<span class="stat-s">+</span></span>
+          <span class="stat-label">Years shipping software</span>
         </div>
       </div>
-      <aside class="hero-card">
-        <div class="card-orbit orbit-one"></div><div class="card-orbit orbit-two"></div>
-        <div class="monogram">US<span>.</span></div>
-        <h2>Distributed systems<br>& cloud engineering</h2>
-        <div class="focus-tags"><span>Java</span><span>AWS</span><span>Microservices</span><span>System design</span></div>
-        <div class="card-bottom"><span>Currently at Amazon</span><span>↗</span></div>
-      </aside>
-    </section>
 
-    <section class="section section-muted" id="about">
-      <div class="container about-grid">
-        <div><p class="eyebrow">01 / ABOUT</p><h2 class="section-title">Engineering with<br><span>impact in mind.</span></h2></div>
-        <div class="about-copy">
-          <p>Results-driven software engineer with experience designing, developing, and delivering scalable, high-performance software systems. My background spans cloud infrastructure, streaming data platforms, AI-enabled products, and enterprise applications.</p>
-          <p>I bring a strong foundation in Java and backend engineering, along with hands-on experience in AWS, distributed architectures, and modern full-stack technologies. I value thoughtful system design, operational excellence, and collaborative engineering.</p>
-          <a class="text-link" href="https://linkedin.com/in/udit-sharma-nz" target="_blank" rel="noreferrer">Connect on LinkedIn ↗</a>
-        </div>
+      <div class="hero-cta-row">
+        <a class="btn btn-primary" href="#experience">View my work</a>
+        <a class="btn btn-ghost" href="https://linkedin.com/in/udit-sharma-nz" target="_blank" rel="noreferrer">LinkedIn ↗</a>
       </div>
-    </section>
 
-    <section class="section container" id="experience">
-      <div class="section-heading"><div><p class="eyebrow">02 / EXPERIENCE</p><h2 class="section-title">Where I’ve made<br><span>an impact.</span></h2></div><p class="section-note">Selected contributions across cloud infrastructure, AI products, and enterprise software.</p></div>
-      <div class="timeline">
-        <article class="job">
-          <div class="job-meta"><span class="job-date">OCT 2025 — PRESENT</span><span class="job-location">VANCOUVER, BC</span></div>
-          <div class="job-main">
-            <div class="job-title-row"><div><h3>Software Development Engineer</h3><p class="company">Amazon <span>· Amazon Assessments</span></p></div><span class="job-index">01</span></div>
-            <p class="job-summary">Building capabilities for an AI-proctored interview platform, spanning model workflows, real-time video, and agent-assisted engineering operations.</p>
-            <ul>
-              <li>Helped migrate audio-model workloads from Amazon SageMaker to Amazon Bedrock, reducing AI costs by <strong>20%</strong>; recommended inference optimizations to improve prediction quality and efficiency.</li>
-              <li>Implemented real-time interview video streaming with Amazon Kinesis Video Streams WebRTC.</li>
-              <li>Built orchestration and media-storage services in Go to support the AI-proctored interview platform.</li>
-              <li>Extended the team’s MCP server with <strong>20 tools</strong>, giving AI agents project context and troubleshooting capabilities and reducing primary on-call workload.</li>
-              <li>Led agentic-AI readiness initiatives to improve agents’ understanding of codebases, architectures, and operational workflows.</li>
-            </ul>
-            <div class="tech-list"><span>Java</span><span>Go</span><span>Python</span><span>Bedrock</span><span>SageMaker</span><span>TypeScript</span><span>React</span><span>WebRTC</span></div>
-          </div>
-        </article>
-
-        <article class="job">
-          <div class="job-meta"><span class="job-date">MAR 2023 — OCT 2025</span><span class="job-location">VANCOUVER, BC</span></div>
-          <div class="job-main">
-            <div class="job-title-row"><div><h3>Software Development Engineer</h3><p class="company">Amazon Web Services <span>· Kinesis Data Streams, S3</span></p></div><span class="job-index">02</span></div>
-            <p class="job-summary">Worked on large-scale streaming infrastructure and regional AWS capacity, with a focus on performance, scalability, and operational excellence.</p>
-            <ul>
-              <li>Led implementation and load testing of Kinesis Data Streams On-Demand mode using a cost-efficient backend architecture.</li>
-              <li>Achieved <strong>2 GB/s throughput per stream</strong> while maintaining rates within AWS SLAs.</li>
-              <li>Architected and optimized systems processing billions of events daily, increasing throughput by <strong>500%</strong> and reducing latency by approximately 100 ms in a critical tier-1 service.</li>
-              <li>Led four engineers to build AWS Kinesis Data Streams infrastructure in the Canada West (Calgary) region, completing the regional build in eight weeks.</li>
-              <li>Managed a Sev-1 incident during the July 2024 AWS outage, driving root-cause analysis within two hours and authoring Correction of Errors documents.</li>
-            </ul>
-            <div class="tech-list"><span>Java</span><span>Python</span><span>Ruby</span><span>EC2</span><span>CloudFormation</span><span>DynamoDB</span><span>Kinesis</span></div>
-          </div>
-        </article>
-
-        <article class="job">
-          <div class="job-meta"><span class="job-date">DEC 2021 — FEB 2023</span><span class="job-location">WELLINGTON, NZ</span></div>
-          <div class="job-main">
-            <div class="job-title-row"><div><h3>Software Development Engineer</h3><p class="company">Bank of New Zealand <span>· Home Lending</span></p></div><span class="job-index">03</span></div>
-            <ul>
-              <li>Developed and maintained enterprise applications using Java EE, WebSphere, and .NET, delivering four new features and improving response time by 200 ms.</li>
-              <li>Contributed architectural improvements that increased system availability and reduced production incidents by <strong>20%</strong>.</li>
-              <li>Mentored two graduate developers, helping them independently deliver features within four weeks.</li>
-              <li>Conducted approximately 20 code reviews per sprint and contributed to knowledge-sharing sessions for 100 engineers.</li>
-            </ul>
-            <div class="tech-list"><span>C#</span><span>ASP.NET</span><span>.NET Core</span><span>SQL Server</span><span>Java EE</span><span>WebSphere</span></div>
-          </div>
-        </article>
-
-        <article class="job">
-          <div class="job-meta"><span class="job-date">JUN 2018 — DEC 2021</span><span class="job-location">CHRISTCHURCH, NZ</span></div>
-          <div class="job-main">
-            <div class="job-title-row"><div><h3>Software Development Engineer II · Full-stack</h3><p class="company">Verizon Connect NZ <span>· Analytics, Vehicles API</span></p></div><span class="job-index">04</span></div>
-            <ul>
-              <li>Built full-stack features with C#, .NET Core, Angular, React, and SQL databases, improving API response times by 10%.</li>
-              <li>Improved engineering standards across 20 services and applications, reducing production defects by <strong>50%</strong>.</li>
-              <li>Partnered with QA to define and execute 2,000 test cases, raising coverage to 90% and reducing escaped defects by 90%.</li>
-              <li>Led technical design discussions for two Assets API projects, coordinating implementation across eight engineers.</li>
-              <li>Mentored graduate engineers, coordinated delivery activities, and organized knowledge-sharing sessions for 50 engineers.</li>
-            </ul>
-            <div class="tech-list"><span>C#</span><span>.NET Core</span><span>Redis</span><span>TypeScript</span><span>Angular</span><span>React</span><span>Node.js</span><span>PostgreSQL</span></div>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section class="section section-muted" id="skills">
-      <div class="container">
-        <p class="eyebrow">03 / TOOLKIT</p><h2 class="section-title">Technologies I work <span>with.</span></h2>
-        <div class="skills-grid">
-          <div class="skill-card"><div class="skill-icon">01</div><h3>Languages & frameworks</h3><p>Java, C#, Python, Go, TypeScript, Ruby, Spring, .NET Core, ASP.NET, Django, Node.js</p></div>
-          <div class="skill-card"><div class="skill-icon">02</div><h3>Cloud & infrastructure</h3><p>AWS, Azure, GCP, EC2, Lambda, S3, DynamoDB, Kinesis, SQS, SNS, RDS, CloudFormation</p></div>
-          <div class="skill-card"><div class="skill-icon">03</div><h3>Architecture & data</h3><p>Distributed systems, microservices, system design, scalability, reliability, MySQL, PostgreSQL, SQL Server, Redis</p></div>
-          <div class="skill-card"><div class="skill-icon">04</div><h3>DevOps & quality</h3><p>Docker, Kubernetes, Terraform, Jenkins, GitLab CI, CircleCI, CI/CD, TDD, JUnit, TestNG, automated testing</p></div>
-          <div class="skill-card"><div class="skill-icon">05</div><h3>Security & operations</h3><p>AWS IAM, VPC, KMS, encryption, monitoring, incident response, performance optimization, operational excellence</p></div>
-          <div class="skill-card"><div class="skill-icon">06</div><h3>Technical leadership</h3><p>Technical design, mentoring, code reviews, interviewing, Agile, Scrum, Kanban, cross-functional collaboration</p></div>
+      <!-- floating company badge -->
+      <div class="current-badge">
+        <div class="badge-dot"></div>
+        <div>
+          <div class="badge-company">Amazon · Assessments</div>
+          <div class="badge-title">SDE · AI Proctoring Platform</div>
         </div>
       </div>
     </section>
 
-    <section class="section container" id="education">
-      <p class="eyebrow">04 / EDUCATION</p><h2 class="section-title">The foundations.</h2>
-      <div class="education-list">
-        <div><span class="edu-year">POSTGRADUATE</span><h3>Postgraduate Diploma in Computer Science</h3><p>University of Canterbury · New Zealand</p></div>
-        <div><span class="edu-year">UNDERGRADUATE</span><h3>Bachelor of Engineering in Electronics Engineering</h3><p>Panjab University · India</p></div>
+    <!-- ─── MARQUEE ─── -->
+    <div class="marquee-wrap" aria-hidden="true">
+      <div class="marquee-track">
+        <span>Java</span><span>·</span>
+        <span>Go</span><span>·</span>
+        <span>AWS Kinesis</span><span>·</span>
+        <span>Bedrock</span><span>·</span>
+        <span>Distributed Systems</span><span>·</span>
+        <span>Microservices</span><span>·</span>
+        <span>Python</span><span>·</span>
+        <span>TypeScript</span><span>·</span>
+        <span>Kubernetes</span><span>·</span>
+        <span>System Design</span><span>·</span>
+        <span>DynamoDB</span><span>·</span>
+        <span>WebRTC</span><span>·</span>
+        <span>MCP</span><span>·</span>
+        <span>Java</span><span>·</span>
+        <span>Go</span><span>·</span>
+        <span>AWS Kinesis</span><span>·</span>
+        <span>Bedrock</span><span>·</span>
+        <span>Distributed Systems</span><span>·</span>
+        <span>Microservices</span><span>·</span>
+        <span>Python</span><span>·</span>
+        <span>TypeScript</span><span>·</span>
+        <span>Kubernetes</span><span>·</span>
+        <span>System Design</span><span>·</span>
+        <span>DynamoDB</span><span>·</span>
+        <span>WebRTC</span><span>·</span>
+        <span>MCP</span><span>·</span>
+      </div>
+    </div>
+
+    <!-- ─── ABOUT ─── -->
+    <section class="section about-section" id="about">
+      <div class="section-label">01 — About</div>
+      <div class="about-grid">
+        <div class="about-left">
+          <h2>Engineer by craft,<br><span>systems thinker</span><br>by habit.</h2>
+        </div>
+        <div class="about-right">
+          <p>
+            I've spent 8+ years at the deep end of the stack — designing infrastructure
+            that doesn't flinch at scale, debugging incidents at 2 AM, and building teams
+            that ship with confidence.
+          </p>
+          <p>
+            From standing up a new AWS region in eight weeks, to extending an MCP server
+            so AI agents could autonomously troubleshoot production issues — I work best
+            on problems where the complexity is real and the stakes matter.
+          </p>
+          <p>
+            Currently at Amazon in Vancouver, I'm building AI-proctored interview
+            infrastructure: real-time video, audio ML models, and agent-ready orchestration services.
+          </p>
+          <div class="about-links">
+            <a href="https://linkedin.com/in/udit-sharma-nz" target="_blank" rel="noreferrer">LinkedIn ↗</a>
+            <a href="mailto:mail.uditsharma@gmail.com">mail.uditsharma@gmail.com</a>
+          </div>
+        </div>
       </div>
     </section>
 
+    <!-- ─── EXPERIENCE ─── -->
+    <section class="section exp-section" id="experience">
+      <div class="section-label">02 — Work</div>
+      <h2 class="section-title">Where I've<br>shipped things.</h2>
+
+      <div class="exp-list">
+
+        <article class="exp-item" tabindex="0">
+          <div class="exp-header">
+            <div class="exp-index">01</div>
+            <div class="exp-title-block">
+              <h3>Software Development Engineer</h3>
+              <div class="exp-company">Amazon <span class="exp-team">— Amazon Assessments</span></div>
+            </div>
+            <div class="exp-meta">
+              <span class="exp-date">Oct 2025 — Present</span>
+              <span class="exp-loc">Vancouver, BC</span>
+              <span class="exp-badge">Current</span>
+            </div>
+            <button class="exp-toggle" aria-label="Expand">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+          </div>
+          <div class="exp-body">
+            <p class="exp-summary">Building an AI-proctored interview platform — model pipelines, real-time video infrastructure, and agent-assisted operations.</p>
+            <ul>
+              <li>Migrated audio-model workloads from SageMaker to Bedrock, cutting AI costs by <strong>20%</strong></li>
+              <li>Implemented real-time interview video streaming via <strong>Kinesis Video Streams WebRTC</strong></li>
+              <li>Built orchestration and media-storage services in <strong>Go</strong></li>
+              <li>Extended MCP server with <strong>20 tools</strong> — reduced primary on-call load significantly</li>
+              <li>Led agentic-AI readiness across team projects, improving agent understanding of codebases and workflows</li>
+            </ul>
+            <div class="exp-tags">
+              <span>Java</span><span>Go</span><span>Python</span><span>Bedrock</span><span>SageMaker</span><span>TypeScript</span><span>React</span><span>WebRTC</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="exp-item" tabindex="0">
+          <div class="exp-header">
+            <div class="exp-index">02</div>
+            <div class="exp-title-block">
+              <h3>Software Development Engineer</h3>
+              <div class="exp-company">Amazon Web Services <span class="exp-team">— Kinesis Data Streams, S3</span></div>
+            </div>
+            <div class="exp-meta">
+              <span class="exp-date">Mar 2023 — Oct 2025</span>
+              <span class="exp-loc">Vancouver, BC</span>
+            </div>
+            <button class="exp-toggle" aria-label="Expand">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+          </div>
+          <div class="exp-body">
+            <p class="exp-summary">Large-scale streaming infrastructure and regional capacity — billions of events daily, 2 GB/s throughput, Sev-1 management.</p>
+            <ul>
+              <li>Led On-Demand mode in Kinesis Data Streams — achieved <strong>2 GB/s throughput per stream</strong></li>
+              <li>Increased throughput by <strong>500%</strong>, reduced latency by ~100 ms in a tier-1 service</li>
+              <li>Led 4 engineers to build <strong>ca-west-1 (Calgary)</strong> region infrastructure in 8 weeks</li>
+              <li>Managed Sev-1 during July 2024 AWS outage — root cause in 2 hours, authored full COE</li>
+            </ul>
+            <div class="exp-tags">
+              <span>Java</span><span>Python</span><span>Ruby</span><span>EC2</span><span>CloudFormation</span><span>DynamoDB</span><span>Kinesis</span><span>S3</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="exp-item" tabindex="0">
+          <div class="exp-header">
+            <div class="exp-index">03</div>
+            <div class="exp-title-block">
+              <h3>Software Development Engineer</h3>
+              <div class="exp-company">Bank of New Zealand <span class="exp-team">— Home Lending</span></div>
+            </div>
+            <div class="exp-meta">
+              <span class="exp-date">Dec 2021 — Feb 2023</span>
+              <span class="exp-loc">Wellington, NZ</span>
+            </div>
+            <button class="exp-toggle" aria-label="Expand">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+          </div>
+          <div class="exp-body">
+            <p class="exp-summary">Enterprise application development and architecture improvements for one of New Zealand's largest retail banks.</p>
+            <ul>
+              <li>Delivered 4 new features, improved response time by 200 ms</li>
+              <li>Reduced production incidents by <strong>20%</strong> through architectural improvements</li>
+              <li>Mentored 2 graduates to independent feature delivery in 4 weeks</li>
+              <li>Led knowledge-sharing sessions for <strong>100 engineers</strong> on .NET Core microservices</li>
+            </ul>
+            <div class="exp-tags">
+              <span>C#</span><span>ASP.NET MVC</span><span>.NET Core</span><span>SQL Server</span><span>Java EE</span><span>WebSphere</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="exp-item" tabindex="0">
+          <div class="exp-header">
+            <div class="exp-index">04</div>
+            <div class="exp-title-block">
+              <h3>Software Development Engineer II — Full-Stack</h3>
+              <div class="exp-company">Verizon Connect NZ <span class="exp-team">— Analytics, Vehicles API</span></div>
+            </div>
+            <div class="exp-meta">
+              <span class="exp-date">Jun 2018 — Dec 2021</span>
+              <span class="exp-loc">Christchurch, NZ</span>
+            </div>
+            <button class="exp-toggle" aria-label="Expand">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+          </div>
+          <div class="exp-body">
+            <p class="exp-summary">Full-stack development and technical leadership across fleet telemetry and analytics platforms.</p>
+            <ul>
+              <li>Built features across 20 services — reduced production defects by <strong>50%</strong></li>
+              <li>2,000 test cases, 90% test coverage, 90% fewer escaped defects</li>
+              <li>Led technical design for two Assets API projects — team of 8 engineers</li>
+              <li>Organized knowledge-sharing sessions for 50 engineers</li>
+            </ul>
+            <div class="exp-tags">
+              <span>C#</span><span>.NET Core</span><span>Redis</span><span>TypeScript</span><span>Angular</span><span>React</span><span>Node.js</span><span>PostgreSQL</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ─── SKILLS ─── -->
+    <section class="section skills-section" id="skills">
+      <div class="section-label">03 — Skills</div>
+      <h2 class="section-title">The toolkit.</h2>
+
+      <div class="skills-bento">
+
+        <div class="bento-card bento-large">
+          <div class="bento-num">01</div>
+          <h3>Languages &amp; Frameworks</h3>
+          <div class="bento-pills">
+            <span>Java</span><span>Go</span><span>C#</span><span>Python</span>
+            <span>TypeScript</span><span>Ruby</span><span>Spring</span>
+            <span>.NET Core</span><span>ASP.NET</span><span>Django</span><span>Node.js</span>
+          </div>
+        </div>
+
+        <div class="bento-card bento-large">
+          <div class="bento-num">02</div>
+          <h3>Cloud &amp; AWS</h3>
+          <div class="bento-pills">
+            <span>Kinesis</span><span>EC2</span><span>Lambda</span><span>S3</span>
+            <span>DynamoDB</span><span>Bedrock</span><span>SageMaker</span>
+            <span>RDS</span><span>CloudFormation</span><span>SQS</span><span>SNS</span>
+            <span>Athena</span><span>Glue</span><span>Azure</span><span>GCP</span>
+          </div>
+        </div>
+
+        <div class="bento-card">
+          <div class="bento-num">03</div>
+          <h3>Architecture</h3>
+          <div class="bento-pills">
+            <span>Distributed Systems</span><span>Microservices</span>
+            <span>System Design</span><span>Scalability</span><span>Event Streaming</span>
+          </div>
+        </div>
+
+        <div class="bento-card">
+          <div class="bento-num">04</div>
+          <h3>DevOps</h3>
+          <div class="bento-pills">
+            <span>Docker</span><span>Kubernetes</span><span>Terraform</span>
+            <span>Jenkins</span><span>GitLab CI</span><span>CircleCI</span>
+          </div>
+        </div>
+
+        <div class="bento-card">
+          <div class="bento-num">05</div>
+          <h3>Data Stores</h3>
+          <div class="bento-pills">
+            <span>PostgreSQL</span><span>MySQL</span><span>SQL Server</span>
+            <span>DynamoDB</span><span>Redis</span>
+          </div>
+        </div>
+
+        <div class="bento-card">
+          <div class="bento-num">06</div>
+          <h3>Leadership</h3>
+          <div class="bento-pills">
+            <span>Technical Design</span><span>Mentoring</span>
+            <span>Code Reviews</span><span>Agile/Scrum</span><span>Incident Mgmt</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ─── EDUCATION ─── -->
+    <section class="section edu-section" id="education">
+      <div class="section-label">04 — Education</div>
+      <div class="edu-grid">
+        <div class="edu-card">
+          <div class="edu-icon">PG</div>
+          <div>
+            <h3>Postgraduate Diploma in Computer Science</h3>
+            <p>University of Canterbury · Christchurch, New Zealand</p>
+          </div>
+        </div>
+        <div class="edu-card">
+          <div class="edu-icon">BE</div>
+          <div>
+            <h3>Bachelor of Engineering in Electronics Engineering</h3>
+            <p>Panjab University · India</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── CONTACT ─── -->
     <section class="contact-section" id="contact">
-      <div class="container contact-inner">
-        <p class="eyebrow">05 / CONTACT</p><h2>Have an interesting<br>problem to solve?</h2>
-        <p>I’d be happy to connect and talk about software engineering, distributed systems, or opportunities to build impactful products.</p>
-        <a class="button button-light" href="mailto:mail.uditsharma@gmail.com">Let’s talk <span>↗</span></a>
-        <div class="contact-links"><a href="mailto:mail.uditsharma@gmail.com">mail.uditsharma@gmail.com</a><a href="https://linkedin.com/in/udit-sharma-nz" target="_blank" rel="noreferrer">LinkedIn ↗</a></div>
+      <div class="contact-bg-text" aria-hidden="true">Let's talk</div>
+      <div class="contact-inner">
+        <div class="section-label light">05 — Contact</div>
+        <h2>Got an interesting<br>problem?</h2>
+        <p>I'm open to senior/staff SDE opportunities and interesting conversations about distributed systems, AI infra, or complex engineering challenges.</p>
+        <a class="btn btn-accent" href="mailto:mail.uditsharma@gmail.com">Send me a message ↗</a>
+        <div class="contact-details">
+          <a href="mailto:mail.uditsharma@gmail.com">mail.uditsharma@gmail.com</a>
+          <a href="https://linkedin.com/in/udit-sharma-nz" target="_blank" rel="noreferrer">linkedin.com/in/udit-sharma-nz</a>
+        </div>
       </div>
     </section>
+
   </main>
 
-  <footer class="footer"><div class="container"><span>© <span id="year"></span> Udit Sharma</span><span>Designed & built with care.</span><a href="#home">Back to top ↑</a></div></footer>
+  <footer class="site-footer">
+    <span>© <span id="yr"></span> Udit Sharma</span>
+    <span class="footer-mid">Vancouver, BC</span>
+    <a href="#hero">↑ Top</a>
+  </footer>
+
   <script src="script.js"></script>
 </body>
 </html>
